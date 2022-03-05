@@ -1,9 +1,10 @@
+local hyper = {'ctrl', 'alt', 'cmd', 'shift'}
 -- All keys are qwerty mapped and therefore I have it translated
 -- dvorak: cmd-shift-R
-hs.hotkey.bind({"cmd", "shift"}, "o", function() hs.reload() end)
+hs.hotkey.bind(hyper, "o", function() hs.reload() end)
 
 -- dvorak cmd-shift-space
-hs.hotkey.bind({"cmd", "shift"}, "space", function()
+hs.hotkey.bind(hyper, "space", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -17,7 +18,7 @@ hs.hotkey.bind({"cmd", "shift"}, "space", function()
 end)
 
 -- dvorak cmd-shift-H
-hs.hotkey.bind({"cmd", "shift"}, "j", function()
+hs.hotkey.bind(hyper, "j", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -31,7 +32,7 @@ hs.hotkey.bind({"cmd", "shift"}, "j", function()
 end)
 
 -- dvorak cmd-shift-L
-hs.hotkey.bind({"cmd", "shift"}, "p", function()
+hs.hotkey.bind(hyper, "p", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -46,7 +47,7 @@ end)
 
 -- Window Fullscreen feature
 -- dvorak cmd-shift-enter
-hs.hotkey.bind({"cmd", "shift"}, "return", function()
+hs.hotkey.bind(hyper, "return", function()
     local win = hs.window.focusedWindow()
     local toggle = not win:isFullScreen()
     win:setFullScreen(toggle)
@@ -59,7 +60,7 @@ hs.hotkey.bind({"cmd"}, "m", function()
     win:minimize()
 end)
 -- dvorak cmd-shift-M
-hs.hotkey.bind({"cmd", "shift"}, "m", function()
+hs.hotkey.bind(hyper, "m", function()
     local wins = hs.window.minimizedWindows()
     -- TODO unminimize same app name first
     if #wins > 0 then wins[1]:unminimize() end
