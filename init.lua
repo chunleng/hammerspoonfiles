@@ -1,9 +1,7 @@
 local hyper = {'ctrl', 'alt', 'cmd', 'shift'}
 -- All keys are qwerty mapped and therefore I have it translated
--- dvorak: cmd-shift-R
-hs.hotkey.bind(hyper, "o", function() hs.reload() end)
+hs.hotkey.bind(hyper, "r", function() hs.reload() end)
 
--- dvorak cmd-shift-space
 hs.hotkey.bind(hyper, "space", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
@@ -46,7 +44,6 @@ hs.hotkey.bind(hyper, "p", function()
 end)
 
 -- Window Fullscreen feature
--- dvorak cmd-shift-enter
 hs.hotkey.bind(hyper, "return", function()
     local win = hs.window.focusedWindow()
     local toggle = not win:isFullScreen()
@@ -54,13 +51,11 @@ hs.hotkey.bind(hyper, "return", function()
 end)
 
 -- Window Minimize/Unminimize feature
--- dvorak cmd-M
-hs.hotkey.bind({"cmd"}, "m", function()
+hs.hotkey.bind(hyper, "m", function()
     local win = hs.window.focusedWindow()
     win:minimize()
 end)
--- dvorak cmd-shift-M
-hs.hotkey.bind(hyper, "m", function()
+hs.hotkey.bind(hyper, "n", function()
     local wins = hs.window.minimizedWindows()
     -- TODO unminimize same app name first
     if #wins > 0 then wins[1]:unminimize() end
