@@ -65,3 +65,16 @@ hs.hotkey.bind(hyper, "m", function()
     -- TODO unminimize same app name first
     if #wins > 0 then wins[1]:unminimize() end
 end)
+
+hs.hotkey.bind(hyper, "-", function()
+    hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1800 -h 1169')
+end)
+
+hs.hotkey.bind(hyper, "0", function()
+    hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1512 -h 982')
+end)
+
+-- hyper-+
+hs.hotkey.bind(hyper, "=", function()
+    hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1147 -h 745')
+end)
