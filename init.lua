@@ -73,3 +73,9 @@ end)
 hs.hotkey.bind(hyper, "=", function()
     hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1147 -h 745')
 end)
+
+-- Open menu for Color Toggling
+hs.hotkey.bind(hyper, 'c', function()
+    hs.execute(
+        'open "x-apple.systempreferences:com.apple.preference.universalaccess?Display"')
+end)
