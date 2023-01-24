@@ -1,3 +1,4 @@
+local focus_screen = {w = 1800, h = 1080}
 local hyper = {'ctrl', 'alt', 'cmd', 'shift'}
 -- All keys are qwerty mapped and therefore I have it translated
 hs.hotkey.bind(hyper, "r", function() hs.reload() end)
@@ -8,10 +9,10 @@ hs.hotkey.bind(hyper, "space", function()
     local screen = win:screen()
     local max = screen:frame()
 
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w
-    f.h = max.h
+    f.x = math.max((max.w - focus_screen.w) / 2, 0) + max.x
+    f.y = math.max((max.h - focus_screen.h) / 2, 0) + max.y
+    f.w = math.min(focus_screen.w, max.w)
+    f.h = math.min(focus_screen.h, max.h)
     win:setFrame(f)
 end)
 
@@ -22,10 +23,10 @@ hs.hotkey.bind(hyper, "j", function()
     local screen = win:screen()
     local max = screen:frame()
 
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h
+    f.x = math.max((max.w - focus_screen.w) / 2, 0) + max.x
+    f.y = math.max((max.h - focus_screen.h) / 2, 0) + max.y
+    f.w = math.min(focus_screen.w, max.w) / 2
+    f.h = math.min(focus_screen.h, max.h)
     win:setFrame(f)
 end)
 
@@ -36,10 +37,10 @@ hs.hotkey.bind(hyper, "p", function()
     local screen = win:screen()
     local max = screen:frame()
 
-    f.x = max.w / 2
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h
+    f.x = math.max((max.w - focus_screen.w), max.w) / 2
+    f.y = math.max((max.h - focus_screen.h) / 2, 0) + max.y
+    f.w = math.min(focus_screen.w, max.w) / 2
+    f.h = math.min(focus_screen.h, max.h)
     win:setFrame(f)
 end)
 
