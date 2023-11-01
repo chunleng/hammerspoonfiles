@@ -16,8 +16,7 @@ hs.hotkey.bind(hyper, "space", function()
     win:setFrame(f)
 end)
 
--- dvorak cmd-shift-H
-hs.hotkey.bind(hyper, "j", function()
+hs.hotkey.bind(hyper, "h", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -30,8 +29,7 @@ hs.hotkey.bind(hyper, "j", function()
     win:setFrame(f)
 end)
 
--- dvorak cmd-shift-L
-hs.hotkey.bind(hyper, "p", function()
+hs.hotkey.bind(hyper, "l", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -56,22 +54,21 @@ hs.hotkey.bind(hyper, "m", function()
     local win = hs.window.focusedWindow()
     win:minimize()
 end)
-hs.hotkey.bind(hyper, "n", function()
+hs.hotkey.bind(hyper, "b", function()
     local wins = hs.window.minimizedWindows()
     -- TODO unminimize same app name first
     if #wins > 0 then wins[1]:unminimize() end
 end)
 
-hs.hotkey.bind(hyper, "-", function()
-    hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1800 -h 1169')
-end)
-
-hs.hotkey.bind(hyper, "0", function()
+hs.hotkey.bind(hyper, "q", function()
     hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1512 -h 982')
 end)
 
--- hyper-+
-hs.hotkey.bind(hyper, "=", function()
+hs.hotkey.bind(hyper, "j", function()
+    hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1800 -h 1169')
+end)
+
+hs.hotkey.bind(hyper, "k", function()
     hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1147 -h 745')
 end)
 
