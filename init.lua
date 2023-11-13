@@ -69,7 +69,7 @@ hs.hotkey.bind(hyper, "j", function()
 end)
 
 hs.hotkey.bind(hyper, "k", function()
-    hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1147 -h 745')
+    hs.execute('/Applications/RDM.app/Contents/MacOS/RDM -w 1352 -h 878')
 end)
 
 -- Open menu for Color Toggling
