@@ -1,5 +1,5 @@
 local focus_screen = {w = 1800, h = 1080}
-local hyper = {'ctrl', 'alt', 'cmd', 'shift'}
+local hyper = {'ctrl', 'alt', 'shift'}
 -- All keys are qwerty mapped and therefore I have it translated
 hs.hotkey.bind(hyper, "r", function() hs.reload() end)
 
