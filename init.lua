@@ -77,3 +77,8 @@ hs.hotkey.bind(hyper, 'c', function()
     hs.execute(
         'open "x-apple.systempreferences:com.apple.preference.universalaccess?Display"')
 end)
+
+-- Handle URL
+hs.urlevent.httpCallback = function(_, _, _, fullURL)
+    hs.execute("qutebrowser " .. fullURL, true)
+end
