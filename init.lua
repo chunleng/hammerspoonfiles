@@ -80,5 +80,5 @@ end)
 
 -- Handle URL
 hs.urlevent.httpCallback = function(_, _, _, fullURL)
-    hs.execute("qutebrowser '" .. fullURL .. "'", true)
+    hs.execute("/opt/homebrew/bin/qutebrowser '" .. fullURL .. "'")
 end
