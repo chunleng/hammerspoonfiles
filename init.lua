@@ -54,7 +54,7 @@ hs.hotkey.bind(hyper, "m", function()
     local win = hs.window.focusedWindow()
     win:minimize()
 end)
-hs.hotkey.bind(hyper, "b", function()
+hs.hotkey.bind(hyper, "w", function()
     local wins = hs.window.minimizedWindows()
     -- TODO unminimize same app name first
     if #wins > 0 then wins[1]:unminimize() end
@@ -76,6 +76,12 @@ end)
 hs.hotkey.bind(hyper, 'c', function()
     hs.execute(
         'open "x-apple.systempreferences:com.apple.preference.universalaccess?Display"')
+end)
+
+-- Open menu for Bluetooth
+hs.hotkey.bind(hyper, 'b', function()
+    hs.execute(
+        'open "x-apple.systempreferences:com.apple.preferences.Bluetooth"')
 end)
 
 -- Handle URL
